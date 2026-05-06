@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love ❤️</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  overflow-y:auto;
+  padding:40px 20px;
+}
+
+    .container{
+  text-align:center;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:650px;
+  max-width:90%;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease;
+}
+
+    .profile-pic{
+      width:180px;
+      height:280px;
+      border-radius:30%;
+      object-fit:cover;
+      border:5px solid #ff4f81;
+      margin-bottom:20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h1{
+      color:#ff4f81;
+      margin-bottom:15px;
+      font-size:32px;
+    }
+
+    p{
+  color:#555;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:20px;
+  text-align:left;
+}
+
+    button{
+      padding:12px 25px;
+      border:none;
+      background:#ff4f81;
+      color:white;
+      font-size:16px;
+      border-radius:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#e63b6e;
+      transform:scale(1.05);
+    }
+
+    .hidden-message{
+      margin-top:20px;
+      font-size:18px;
+      color:#ff4f81;
+      display:none;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    .heart{
+      position:absolute;
+      color:white;
+      font-size:20px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall{
+      0%{
+        transform:translateY(-10vh);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(110vh);
+        opacity:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <!-- Replace girlfriend.jpg with her picture -->
+    <img src="img/WhatsApp Image 2026-04-22 at 15.52.32.jpeg" alt="My Love" class="profile-pic">
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <p>
+      Happy Birthday to the most amazing and beautiful woman in my life ❤️
+
+Today is not just another day for me, it’s the day someone truly special was born. I honestly don’t think words will ever be enough to explain how much you mean to me, but today I just want you to know how grateful I am to have you in my life. You’ve brought so much happiness, peace, love, and light into my world in ways you probably don’t even realize.
+
+Thank you for being my comfort, my best friend, my happiness, and the person who makes even the hardest days feel easier. Your smile alone has the power to change my mood completely, and your love has changed me in the best possible way. Every moment spent with you is a memory I treasure deeply.
+
+On your special day, I pray that your life continues to be filled with endless happiness, success, good health, and all the beautiful things your heart desires. You deserve nothing but genuine love, peace, and a future full of blessings because your heart is one of the purest I’ve ever known.
+
+I promise to continue loving you, appreciating you, supporting you, and standing by your side through every season of life. No matter what happens, always remember that you are deeply loved, valued, and cherished.
+
+Thank you for being you. Thank you for choosing me. And thank you for making my life more beautiful just by being part of it.
+
+Happy Birthday once again, my love ❤️🎂✨
+
+    </p>
+
+    <button onclick="showMessage()">Click Me ❤️</button>
+
+    <div class="hidden-message" id="message">
+      Zanele, Rendzo will always love you ❤️
+    </div>
+
+  </div>
+
+  <script>
+    function showMessage(){
+      document.getElementById("message").style.display = "block";
+    }
+
+    // Floating hearts animation
+    function createHeart(){
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+      heart.style.fontSize = Math.random() * 20 + 10 + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
